@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head link rel="stylesheet" type="text/css" href="styles.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="/login" method="POST" class="container">
+      <div class="container">
+        <label for="username">Username</label>
+        <input
+          type="text"
+          name="username"
+          placeholder="Enter username here"
+          required
+        />
+  
+        <label for="password">Password</label>
+        <input
+          type="text"
+          name="password"
+          placeholder="Enter password here"
+          required
+        />
+        <button type="submit">Login</button>
+      </div>
+      <script>
+        if(document.location.hash === '#unauthorized') {
+     document.write('<div class=“unauthorized”>Invalid Username or Password</div>');
+        } else if(document.location.hash === '#error') {
+     document.write('<div class=“error”>An error has occured</div>');
+        }
+      </script>
+     
+    </form>
+    
+  </body>
+</html>
